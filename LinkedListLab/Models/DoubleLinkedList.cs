@@ -1,10 +1,11 @@
-﻿
+﻿#nullable disable
+
 namespace LinkedListLab.Models
 {
     public class DoubleLinkedList<T>
     {
-        private Node<T>? _head;
-        private Node<T>? _tail;
+        private Node<T> _head;
+        private Node<T> _tail;
         private int _count = 0;
 
         public DoubleLinkedList(Node<T> node)
@@ -15,7 +16,7 @@ namespace LinkedListLab.Models
         }
         public void Display()
         {
-            Node<T>? current = _head;
+            Node<T> current = _head;
             while (current != null)
             {
                 current.DisplayNode();
@@ -55,7 +56,7 @@ namespace LinkedListLab.Models
 
         public void AddAfterSpecifiedPosition(int position, Node<T> node)
         {
-            Node<T>? current = _head;
+            Node<T> current = _head;
 
             if (position < 0 || position > _count)
             {
@@ -185,7 +186,7 @@ namespace LinkedListLab.Models
             }
             else
             {
-                Node<T>? current = _head;
+                Node<T> current = _head;
                 int position = 0;
                 while (current != null)
                 {

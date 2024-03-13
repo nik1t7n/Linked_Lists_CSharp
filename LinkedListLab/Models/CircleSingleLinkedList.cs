@@ -1,11 +1,12 @@
 ﻿using System;
+#nullable disable
 
 namespace LinkedListLab.Models
 {
     public class CircleSingleLinkedList<T>
     {
-        private Node<T>? _head;
-        private Node<T>? _tail;
+        private Node<T> _head;
+        private Node<T> _tail;
         private int _count = 0;
 
         public CircleSingleLinkedList(Node<T> node)
@@ -24,7 +25,7 @@ namespace LinkedListLab.Models
                 return;
             }
 
-            Node<T>? current = _head;
+            Node<T> current = _head;
             do
             {
                 Console.WriteLine(current.Data);
@@ -83,7 +84,7 @@ namespace LinkedListLab.Models
             }
             else
             {
-                Node<T>? current = _head;
+                Node<T> current = _head;
                 for (int i = 0; i < position - 1; i++)
                 {
                     current = current.Next;
@@ -107,7 +108,7 @@ namespace LinkedListLab.Models
             }
             else
             {
-                Node<T>? current = _head;
+                Node<T> current = _head;
                 while (current.Next != _tail)
                 {
                     current = current.Next;
@@ -156,12 +157,12 @@ namespace LinkedListLab.Models
             }
             else
             {
-                Node<T>? current = _head;
+                Node<T> current = _head;
                 for (int i = 0; i < position - 1; i++)
                 {
                     current = current.Next;
                 }
-                Node<T>? target = current.Next.Next;
+                Node<T> target = current.Next.Next;
                 current.Next.Next = null;
                 current.Next = target;
                 _count--;
@@ -176,7 +177,7 @@ namespace LinkedListLab.Models
             }
             else
             {
-                Node<T>? current = _head;
+                Node<T> current = _head;
                 int position = 0;
                 do
                 {

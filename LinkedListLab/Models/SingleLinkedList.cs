@@ -1,12 +1,12 @@
 ﻿
-using System.Xml.Linq;
+#nullable disable
 
 namespace LinkedListLab.Models
 {
     public class SingleLinkedList<T>
     {
-        private Node<T>? _head;
-        private Node<T>? _tail;
+        private Node<T> _head;
+        private Node<T> _tail;
         private int _count = 0;
 
         public SingleLinkedList()
@@ -31,7 +31,7 @@ namespace LinkedListLab.Models
                 return;
             }
 
-            Node<T>? current = _head;
+            Node<T> current = _head;
             while (current != null)
             {
                 current.DisplayNode();
@@ -70,7 +70,7 @@ namespace LinkedListLab.Models
 
         public void AddAfterSpecifiedPosition(int position, Node<T> node)
         {
-            Node<T>? current = _head;
+            Node<T> current = _head;
 
             if (position < 0 || position > _count)
             {
@@ -114,7 +114,7 @@ namespace LinkedListLab.Models
             }
             else
             {
-                Node<T>? current = _head;
+                Node<T> current = _head;
 
                 while (current.Next != _tail)
                 {
@@ -146,7 +146,7 @@ namespace LinkedListLab.Models
 
         public void RemoveNodeAtSpecificPosition(int position)
         {
-            Node<T>? current = _head;
+            Node<T> current = _head;
 
             if (position < 0 || position > _count)
             {
@@ -173,7 +173,7 @@ namespace LinkedListLab.Models
                     current = current.Next;
                 }
 
-                Node<T>? target = current.Next.Next;
+                Node<T> target = current.Next.Next;
                 current.Next.Next = null;
                 current.Next = target;
 
@@ -189,7 +189,7 @@ namespace LinkedListLab.Models
             }
             else
             {
-                Node<T>? current = _head;
+                Node<T> current = _head;
                 int position = 0;
                 while (current != null)
                 {
