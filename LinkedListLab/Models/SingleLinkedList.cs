@@ -9,6 +9,13 @@ namespace LinkedListLab.Models
         private Node<T>? _tail;
         private int _count = 0;
 
+        public SingleLinkedList()
+        {
+            _head = null;
+            _tail = null;
+            _count = 0;
+        }
+
         public SingleLinkedList(Node<T> node)
         {
             _head = node;
@@ -18,6 +25,12 @@ namespace LinkedListLab.Models
 
         public void Display()
         {
+            if (_head == null)
+            {
+                Console.WriteLine("List is empty.");
+                return;
+            }
+
             Node<T>? current = _head;
             while (current != null)
             {
@@ -25,6 +38,7 @@ namespace LinkedListLab.Models
                 current = current.Next;
             }
         }
+
 
         public void AddAfterLastNode(Node<T> node)
         {
